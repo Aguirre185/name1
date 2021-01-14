@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <title>modificar imagen</title>
+    <title>modificar texto</title>
+
+    <table id="table0">
+        <tr>
+         <td>Row 0 Cell 0</td>
+         <td>Row 0 Cell 1</td>
+        </tr>
+       </table>
+<script type="text/javascript">
+
+//ejem1 modificar imagen
+function setBorderWidth(width) {
+  document.getElementById("img1").style.borderWidth = width + "px";
+}
+
+//ejem2 modificar texto 
+function changeText() {
+	var p = document.getElementById("pid");
+	p.style.color = "blue"
+	p.style.fontSize = "18pt"
+}
+//ejem3 modificar tabla
+var table = document.getElementById('table0');
+var row = table.insertRow(-1);
+var cell, text;
+for (var i=0; i<2; i++) {
+  cell = row.insertCell(-1);
+  text = 'Row ' + row.rowIndex + ' Cell ' + i;
+  cell.appendChild(document.createTextNode(text));
+}
+
+
+</script>
+</body>
+</html>
+
+
